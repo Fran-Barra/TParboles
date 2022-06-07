@@ -1,7 +1,7 @@
 package Main.Trees;
 
-public class BinaryTree<T> {
-    private DoubleNode<T> root;
+public class BinaryTree <T extends Comparable> {
+    private DoubleNode <T> root;
     public BinaryTree(){root = null;}
     public BinaryTree(T o){root = new DoubleNode<T>(o);}
     public BinaryTree(T o, BinaryTree<T> tLeft, BinaryTree<T> tRight){
