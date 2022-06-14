@@ -59,8 +59,22 @@ public class Api {
 //        return false;
     }
 
-    public static void porNiveles(BinaryTree a) {
+    public static void porNiveles(BinaryTree a, int i) {
         /* Muestra el recorrido por niveles*/
+        if (altura(a) == i)
+            System.out.println(a.getRoot());
+        if (altura(a) == 0)
+            return;
+        if (i>altura(a))
+            return;
+        porNiveles(a.getLeft(), i-1);
+        porNiveles(a.getRight(), i-1);
 
+    }
+
+    public int profundidad(BinaryTree a){
+        if (a.isEmpty())
+            return 0;
+        return 1 + Math.max(profundidad(a.getLeft()), profundidad(a.getRight()));
     }
 }

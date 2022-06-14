@@ -43,6 +43,7 @@ public class Main {
         BinaryTree<Integer> tree3 = new BinaryTree<>(2, r5, r6);
 
         System.out.println(Api.altura(tree));
+//        System.out.println(Api.altura(tree));
         System.out.println(Api.lleno(tree2));
         System.out.println(Api.esCompleto(tree2));
         System.out.println(Api.estable(tree));
@@ -51,5 +52,7 @@ public class Main {
 
         System.out.println(Api.isomorfos(tree2, tree3));
         System.out.println(Api.isomorfos(tree2, tree));
+        System.out.println();
+        Api.porNiveles(tree, Api.altura(tree));
     }
 }
